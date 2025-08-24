@@ -22,6 +22,8 @@ console.log(madeAString);
 //   console.log(`You pressed "${event.key}".`);
 // });
 
+let car = "SUV"
+
 const originals = [1, 2, 3];
 
 const doubled = originals.map(item => item * 2);
