@@ -38,3 +38,8 @@ textBox.addEventListener("keydown", (event) => {
 });
 
 const textbox = document.querySelector("#textBox");
+
+let say_hi = function(){
+  alert("Hello! User")
+}
+say_hi()
