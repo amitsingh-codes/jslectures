@@ -200,3 +200,31 @@ switch(a){
     alert('2,3')
     break;
 }
+
+let game = "assassin's creed shadows"
+let version = "2"
+console.log(game.length) 
+console.log(game.charAt(4)) //old bro is unc
+console.log(game.at(4)) //young bro is genz
+console.log(game[4]) //same
+game[0] = "A";    
+console.log(game) // Gives no error, but does not work
+console.log(game.concat("-",version))
+console.log(game.slice(3,9))
+console.log(game.slice(-3))
+console.log(game.substring(5,10))
+let c = "                           he                llo                     "
+console.log(c)
+console.log(c.trim())
+let text = "5";
+text = text.padStart(4," ");
+console.log(text)
+let text1 = "Please visit Microsoft!";
+let newText = text1.replace("MICROSOFT", "W3Schools");  //case sensitive
+console.log(newText)
+let newText1 = text1.replace(/MICROSOFT/i,"amit")
+console.log(newText1)
+
+let text2 = "Please visit Microsoft and Microsoft!";
+let newText2 = text2.replace(/Microsoft/g, "W3Schools");
+console.log(newText2)
