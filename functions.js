@@ -44,8 +44,34 @@ let say_hi = function(){
 }
 // say_hi()
 
-function capitalize(string){
-  console.log(string[0].toUpperCase()+string.slice(1).toLowerCase());
+capitalize("aMit")
+
+function add7(num){
+  return 7+num;
 }
 
-capitalize("aMit")
+console.log(add7(5))
+
+function multiply(num1,num2){
+  return num1 * num2;
+}
+
+console.log(multiply(4,5))
+
+function capitalize(string){
+  return string[0].toUpperCase() + string.toLowerCase().slice(1);
+}
+
+console.log(capitalize("amIt"))
+
+function lastletter(string){
+  return string.at(-1)
+}
+
+function lastletter1(string){
+  return string[string.length-1]
+}
+
+console.log(lastletter("a car went to him"))
+
+console.log(lastletter1("a car went to him"))
