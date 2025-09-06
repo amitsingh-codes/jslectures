@@ -1,0 +1,1 @@
+let num = Number(prompt("Enter the number"))
