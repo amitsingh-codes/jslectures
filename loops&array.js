@@ -98,7 +98,56 @@ while(i1>=0){
   i1--
 }
 
-let a= prompt("Enter a number greater than 100") 
-while (a<100){
-a = prompt("The number should be greater then 100!!!!!!!!")
-}   
+// let a= prompt("Enter a number greater than 100") 
+// while (a<100){
+// a = prompt("The number should be greater then 100!!!!!!!!")
+// }   
+
+let l = ["A","B","C","D"] 
+
+for (let i = 0; i < l.length; i++) {
+  const element = l[i];
+  console.log(element)
+}
+
+//get element
+l[0] //A
+l.at(-1) //D
+
+//add element by push
+l.push("E") //add at end
+
+//update
+l[1]="BB" //update B to BB
+
+//length
+l.length //5
+
+//pop,push,shift,unshift
+
+//pop ---> remove last element
+//push ---> add element at last
+//shift ---> remove first element
+//unshift ---> add element at first
+
+l.pop() //remove last element D
+l.push("D") //add D at last
+l.shift() //remove first element A
+l.unshift("A") //add A at first
+
+
+let fruits = ["Banana"]
+
+let arr = fruits; // copy by reference (two variables reference the same array)
+
+console.log( arr === fruits ); // true
+
+arr.push("Pear"); // modify the array by reference
+
+console.log( fruits ); // Banana, Pear - 2 items now
+
+console.log(l.toString()) //A,BB,C,D
+
+let car = "" + 1
+console.log(typeof car) //string
+
