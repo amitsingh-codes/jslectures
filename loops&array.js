@@ -151,3 +151,16 @@ console.log(l.toString()) //A,BB,C,D
 let car = "" + 1
 console.log(typeof car) //string
 
+let n = ["A","B","C","D","E"]
+// console.log(n.splice(1,4)) //returns the list of element jo delete kare hai 
+console.log(n.length)
+n.splice(0,3,"AA","CC")
+console.log(n)
+
+let b = ["hi","hello"];
+let n1 = n.concat(["hi"])
+console.log(n1)
+
+n.forEach(function(item,index,array){
+  console.log(`${item} is at index ${index}, in array ${array}`)
+});
