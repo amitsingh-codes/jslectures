@@ -151,7 +151,7 @@ console.log(l.toString()) //A,BB,C,D
 let car = "" + 1
 console.log(typeof car) //string
 
-let n = ["A","B","C","D","E"]
+let n = ["A","B","C","D","E","AA"]
 // console.log(n.splice(1,4)) //returns the list of element jo delete kare hai 
 console.log(n.length)
 n.splice(0,3,"AA","CC")
@@ -164,3 +164,21 @@ console.log(n1)
 n.forEach(function(item,index,array){
   console.log(`${item} is at index ${index}, in array ${array}`)
 });
+
+ console.log(n.indexOf("AA",3))
+
+ let result = n.find(function(item,index = 1,array){
+  let a = index>2
+  console.log(item ,"-", a)
+ });
+
+ let numbers = [5, 12, 8, 130, 44];
+// filter(callback(element, index, array), thisArg)
+let result1 = numbers.filter(function(element, index, array) {
+  console.log("Checking:", element, "at index", index, "in", array);
+  return element > 10;  // condition
+}, thisArg = null);
+
+console.log("Result:", result1);
+
+
