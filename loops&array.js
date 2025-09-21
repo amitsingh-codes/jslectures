@@ -181,4 +181,20 @@ let result1 = numbers.filter(function(element, index, array) {
 
 console.log("Result:", result1);
 
+//MAP
+let index = numbers.map((item => item + 2));
+console.log(index);
 
+let add2 = numbers.map(function(item){
+  return item + 2;
+});
+console.log(add2);
+
+let a = "Amit"
+b = a.split("")
+console.log(b)
+b.reverse()
+b.join("")
+console.log(b)
+a=b.join("")
+console.log(a)
