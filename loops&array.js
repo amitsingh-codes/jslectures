@@ -198,3 +198,108 @@ b.join("")
 console.log(b)
 a=b.join("")
 console.log(a)
+
+let sum = 0;
+function sumOfTripledEvens(arr){
+  for (let a = 0; a < arr.length; a++){
+    let  item = arr[a];
+    if (item%2 == 0){
+      item = item * 3;
+      sum = item + sum;
+    }
+  }
+  console.log(sum)
+}
+
+list = [1,2,3,4,5,6]
+sumOfTripledEvens(list)
+
+//Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+
+function camelize(str){
+  a=str.split("-")
+  let list = [];
+  for (let letter = 0; letter < a.length; letter++) {
+    const element = a[letter];
+    b=element[0].toUpperCase()+element.slice(1).toLowerCase()
+    list.push(b)
+  }
+  list1 = list.join("")
+  camel=list1.toString()
+  console.log(camel)
+}
+camelize("Amit-went-to-amerIca")
+
+//Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array
+
+function filterRange(arr, a, b){
+  let list=[]
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    if (item>=a && item<=b){
+      list.push(item)
+    }
+    console.log(list);
+}
+}
+
+let arr1 = [5, 3, 8, 1,2];
+filterRange(arr1,1,4)
+
+//       OR 
+
+function filterRange(arr,a,b){
+  return arr.filter(item => (item>=a && item<=b))
+}
+
+let filter = filterRange(arr1,1,4)
+console.log(filter)
+
+
+//Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+
+function filterRangeInPlace(arr, a, b){
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    if(item>=a && item<b){
+    }
+    else{
+      arr.splice(item)
+    }
+  }
+  return arr
+}
+
+arr = [1,2,3,4,5,6,7]
+console.log(filterRangeInPlace(arr,1,3))
+
+// Sort in decreasing order
+
+let ar = [5, 2, 1, -10, 8];
+ar.sort((a,b) => b-a)
+console.log(ar);
+
+//We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+
+let arry = ["HTML", "JavaScript", "CSS"];
+a = arry.slice().sort()
+console.log(a)
+console.log(arry)
+
+//Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
+
+let array = [1,2,3]
+array.sort(() => Math.random() - 0.5);
+console.log(array)
+
+//Create a function unique(arr) that should return an array with unique items of arr.
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+function unique(arr) {
+  
+}
+
+console.log(unique(strings))
