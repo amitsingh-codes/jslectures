@@ -4,10 +4,10 @@ for (const cat of cats) {
   console.log(cat);
 }
 
-let Array = ["car","bike"]
+let Array = ["car", "bike"]
 for (let index = 0; index < Array.length; index++) {
-    const element = Array[index];
-    console.log(element)
+  const element = Array[index];
+  console.log(element)
 }
 
 let myFavoriteCats = "My cats are called ";
@@ -61,7 +61,7 @@ let i = 0;
 while (i < cats.length) {
   if (i === cats.length - 1) {
     myFavoriteCats += `and ${cats[i]}.`;
-  } 
+  }
   else {
     myFavoriteCats += `${cats[i]}, `;
   }
@@ -85,11 +85,11 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 let i1 = 10;
 
-while(i1>=0){
-  if (i1==10){
-    console.log("Countdown",i1)
+while (i1 >= 0) {
+  if (i1 == 10) {
+    console.log("Countdown", i1)
   }
-  else if (i1==0){
+  else if (i1 == 0) {
     console.log("Blast off!")
   }
   else {
@@ -103,7 +103,7 @@ while(i1>=0){
 // a = prompt("The number should be greater then 100!!!!!!!!")
 // }   
 
-let l = ["A","B","C","D"] 
+let l = ["A", "B", "C", "D"]
 
 for (let i = 0; i < l.length; i++) {
   const element = l[i];
@@ -118,7 +118,7 @@ l.at(-1) //D
 l.push("E") //add at end
 
 //update
-l[1]="BB" //update B to BB
+l[1] = "BB" //update B to BB
 
 //length
 l.length //5
@@ -140,41 +140,41 @@ let fruits = ["Banana"]
 
 let arr = fruits; // copy by reference (two variables reference the same array)
 
-console.log( arr === fruits ); // true
+console.log(arr === fruits); // true
 
 arr.push("Pear"); // modify the array by reference
 
-console.log( fruits ); // Banana, Pear - 2 items now
+console.log(fruits); // Banana, Pear - 2 items now
 
 console.log(l.toString()) //A,BB,C,D
 
 let car = "" + 1
 console.log(typeof car) //string
 
-let n = ["A","B","C","D","E","AA"]
+let n = ["A", "B", "C", "D", "E", "AA"]
 // console.log(n.splice(1,4)) //returns the list of element jo delete kare hai 
 console.log(n.length)
-n.splice(0,3,"AA","CC")
+n.splice(0, 3, "AA", "CC")
 console.log(n)
 
-let b = ["hi","hello"];
+let b = ["hi", "hello"];
 let n1 = n.concat(["hi"])
 console.log(n1)
 
-n.forEach(function(item,index,array){
+n.forEach(function (item, index, array) {
   console.log(`${item} is at index ${index}, in array ${array}`)
 });
 
- console.log(n.indexOf("AA",3))
+console.log(n.indexOf("AA", 3))
 
- let result = n.find(function(item,index = 1,array){
-  let a = index>2
-  console.log(item ,"-", a)
- });
+let result = n.find(function (item, index = 1, array) {
+  let a = index > 2
+  console.log(item, "-", a)
+});
 
- let numbers = [5, 12, 8, 130, 44];
+let numbers = [5, 12, 8, 130, 44];
 // filter(callback(element, index, array), thisArg)
-let result1 = numbers.filter(function(element, index, array) {
+let result1 = numbers.filter(function (element, index, array) {
   console.log("Checking:", element, "at index", index, "in", array);
   return element > 10;  // condition
 }, thisArg = null);
@@ -185,25 +185,26 @@ console.log("Result:", result1);
 let index = numbers.map((item => item + 2));
 console.log(index);
 
-let add2 = numbers.map(function(item){
+let add2 = numbers.map(function (item) {
   return item + 2;
 });
 console.log(add2);
 
-let a = "Amit"
-b = a.split("")
-console.log(b)
-b.reverse()
-b.join("")
-console.log(b)
-a=b.join("")
-console.log(a)
+function reverseString(a) {
+  b = a.split("")
+  b.reverse()
+  b.join("")
+  a = b.join("")
+  console.log(a)
+}
+
+reverseString("Hello there")
 
 let sum = 0;
-function sumOfTripledEvens(arr){
-  for (let a = 0; a < arr.length; a++){
-    let  item = arr[a];
-    if (item%2 == 0){
+function sumOfTripledEvens(arr) {
+  for (let a = 0; a < arr.length; a++) {
+    let item = arr[a];
+    if (item % 2 == 0) {
       item = item * 3;
       sum = item + sum;
     }
@@ -211,72 +212,72 @@ function sumOfTripledEvens(arr){
   console.log(sum)
 }
 
-list = [1,2,3,4,5,6]
+list = [1, 2, 3, 4, 5, 6]
 sumOfTripledEvens(list)
 
 //Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
 
-function camelize(str){
-  a=str.split("-")
+function camelize(str) {
+  a = str.split("-")
   let list = [];
   for (let letter = 0; letter < a.length; letter++) {
     const element = a[letter];
-    b=element[0].toUpperCase()+element.slice(1).toLowerCase()
+    b = element[0].toUpperCase() + element.slice(1).toLowerCase()
     list.push(b)
   }
   list1 = list.join("")
-  camel=list1.toString()
+  camel = list1.toString()
   console.log(camel)
 }
 camelize("Amit-went-to-amerIca")
 
 //Write a function filterRange(arr, a, b) that gets an array arr, looks for elements with values higher or equal to a and lower or equal to b and return a result as an array
 
-function filterRange(arr, a, b){
-  let list=[]
+function filterRange(arr, a, b) {
+  let list = []
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i];
-    if (item>=a && item<=b){
+    if (item >= a && item <= b) {
       list.push(item)
     }
     console.log(list);
-}
+  }
 }
 
-let arr1 = [5, 3, 8, 1,2];
-filterRange(arr1,1,4)
+let arr1 = [5, 3, 8, 1, 2];
+filterRange(arr1, 1, 4)
 
 //       OR 
 
-function filterRange(arr,a,b){
-  return arr.filter(item => (item>=a && item<=b))
+function filterRange(arr, a, b) {
+  return arr.filter(item => (item >= a && item <= b))
 }
 
-let filter = filterRange(arr1,1,4)
+let filter = filterRange(arr1, 1, 4)
 console.log(filter)
 
 
 //Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
 
-function filterRangeInPlace(arr, a, b){
+function filterRangeInPlace(arr, a, b) {
   for (let i = 0; i < arr.length; i++) {
     const item = arr[i];
-    if(item>=a && item<b){
+    if (item >= a && item < b) {
     }
-    else{
+    else {
       arr.splice(item)
     }
   }
   return arr
 }
 
-arr = [1,2,3,4,5,6,7]
-console.log(filterRangeInPlace(arr,1,3))
+arr = [1, 2, 3, 4, 5, 6, 7]
+console.log(filterRangeInPlace(arr, 1, 3))
 
 // Sort in decreasing order
 
 let ar = [5, 2, 1, -10, 8];
-ar.sort((a,b) => b-a)
+ar.sort((a, b) => b - a)
 console.log(ar);
 
 //We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
@@ -288,7 +289,7 @@ console.log(arry)
 
 //Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
 
-let array = [1,2,3]
+let array = [1, 2, 3]
 array.sort(() => Math.random() - 0.5);
 console.log(array)
 
@@ -299,7 +300,15 @@ let strings = ["Hare", "Krishna", "Hare", "Krishna",
 ];
 
 function unique(arr) {
-  
+  let result = [];
+
+  for (let str of arr) {
+    if (result.includes(str) == false) {
+      result.push(str);
+    }
+  }
+
+  return result;
 }
 
 console.log(unique(strings))
